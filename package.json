@@ -1,0 +1,28 @@
+{
+  "name": "vscode-extension-bundled",
+  "publisher": "Sean Larkin <selarkin@microsoft.com>",
+  "version": "1.0.0",
+  "main": "./dist/main.js",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "dependencies": {
+    "fork-ts-checker-webpack-plugin": "^0.4.9",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.1",
+    "vscode": "^1.1.21",
+    "vscode-languageclient": "^5.0.1",
+    "vscode-languageserver": "^5.0.3",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "prod": "webpack --mode production",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  }
+}
